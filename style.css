@@ -1,0 +1,117 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: #50BEBC;
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 50px 20px;
+    font: 16px 'Karla', sans-serif;
+    background-color: #E6EFF6;
+}
+
+.grid {
+    margin: 0 auto 60px;
+    overflow: hidden;
+    display: grid;
+    max-width: 700px;
+    border-radius: 6px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.grid-item {
+    padding: 40px 30px;
+}
+.grid-item h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+#join { 
+    background-color: white; 
+}
+#join p:nth-child(2) {
+    margin-bottom: 20px;
+}
+#join h1 {
+    color:var(--cyan);
+}
+#join p {
+    color: var(--grayish-blue);
+}
+#join p:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--bright-yellow);
+}
+
+#monthly-sub { 
+    background-color: var(--cyan); 
+    color: white;
+}
+.price-container {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+.price__amount {
+    margin-right: 12px;
+    font-size: 32px;
+}
+.price__per {
+    font-size: 20px;
+    opacity: 0.5;
+}
+#monthly-sub p {
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+.sign-up-btn {
+    padding: 14px;
+    display: block;
+    background-color: var(--bright-yellow);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: ease-out all .3s;
+}
+.sign-up-btn:hover {
+    transform: translateY(3px);
+    background-color: hsl(71, 61%, 52%);
+}
+
+#why-us { 
+    background-color: var(--light-cyan);
+    color: white; 
+}
+#why-us ul {
+    list-style-type: none;
+    line-height: 150%;
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 620px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-item {
+        padding: 50px;
+    }
+    #join {
+        grid-column: 1 / 3;
+    }
+}
+
+footer {
+    text-align: center;
+    opacity: 0.5;
+}
+footer a {
+    color: var(--cyan);
+}
